@@ -1,0 +1,356 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  align-items: center;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  color: whitesmoke;
+}
+
+.brand {
+  font-size: 50px;
+  cursor: pointer;
+  margin: 0;
+  font-family: 'Welix Brush', sans-serif;
+}
+
+.nav-bar {
+  list-style: none;
+  display: flex;
+}
+
+.nav-bar>li {
+  display: table-cell;
+  position: relative;
+  padding: 10px;
+}
+
+.nav-bar>li>a {
+  text-decoration: none;
+  color: whitesmoke;
+  transition: .7s all ease-in-out;
+}
+
+.nav-bar>li>a:hover {
+  color: black;
+}
+/*----------------- Nav Bar --------------------*/
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+h2 {
+  vertical-align: center;
+  text-align: center;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+* {
+  font-family: "Raleway";
+  box-sizing: border-box;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #FFF;
+  height: 50px;
+  padding: 3em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  z-index: 999;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 95px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+
+
+/*----------------- Homepage text -------------------*/
+.index-img {
+  width: 100%;
+  height: 500px;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.index-text {
+  text-align: center;
+}
+.menu a{
+  text-decoration: none;
+  color: whitesmoke;
+  transition: .5s all ease-in;
+  text-transform: uppercase;
+}
+.menu a:hover{
+  color: black;
+}
+
+/*---------------------- Home Body ------------------*/
+.cont1{
+  border-bottom: blue solid 2px;
+  margin: 0px 47% 20px 47%;
+}
+.service{
+  transition: .5s all ease-in-out;
+  cursor: pointer;
+}
+.service:hover{
+  transform: scale(1.05);
+}
+.feedback{
+  font-size: 70px;
+}
+
+/*---------------------- Contact Form -----------*/
+.contact{
+  margin: 0 10% 0 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.contact>input{
+  border: rgb(193, 193, 193) 1px solid;
+  padding: 10px;
+  font-size: 18px;
+  width: 30rem;
+  margin: 10px;
+}
+.contact>textarea{
+  border: rgb(193, 193, 193) 1px solid;
+  padding: 10px;
+  font-size: 18px;
+  width: 61rem;
+  margin: 10px;
+}
+.contact-btn{
+  margin: 0 44% 0 44%;
+  background: rgb(0, 152, 207) ;
+  border: rgb(0, 152, 207) solid 1px;
+  border-radius: 150px;
+  padding: 10px 30px 10px 30px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  text-shadow: black 2px 2px;
+  transition: .5s all ease-in-out;
+}
+.contact-btn:hover{
+  background: rgb(78, 208, 255) ;
+  border: rgb(78, 208, 255) solid 1px;
+}
+.contact-banner{
+  width: 100%;
+  height: 400px;
+}
+.contact-banner-text{
+  position: absolute;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*------------------ Services ------------------*/
+.service-btn{
+  background: rgb(1, 114, 207);
+  border: 0;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  transition: .5s all ease-in-out;
+}
+.service-btn:hover{
+  background: rgb(52, 160, 249);
+}
+
+/*---------------- Useful links her ------------*/
+.useful-links {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  background: rgb(189, 189, 189);
+}
+
+.link1 {
+  list-style: symbols(cyclic "\1F44C");
+}
+.link1 a{
+  text-decoration: none;
+  color: black;
+  transition: .5s all ease-in-out;
+}
+
+.link1>li {
+  padding: 5px;
+}
+
+/*--------------- Footer -----------------*/
+footer {
+  background: rgb(2, 0, 36);
+  background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  text-align: center;
+  padding: 30px;
+  color: white;
+}
+
+@media only screen and (max-width:567px){
+  .cont1{
+    border-bottom: blue solid 2px;
+    margin: 0px 180px 20px 180px;
+  }
+  .head1 h3{
+    font-size: 20px;
+    color: black;
+  }
+  .head1 h5{
+    font-size: 13px;
+  }
+  .index-img {
+    width: 100%;
+    height: 300px;
+    transition: 1s;
+    cursor: pointer;
+  }
+  .contact{
+    margin: 0 0 0 0;
+    display: block;
+  }
+  .contact>input{
+    border: rgb(193, 193, 193) 1px solid;
+    padding: 10px;
+    font-size: 18px;
+    width: 20rem;
+    margin: 10px;
+  }
+  .contact>textarea{
+    width: 20rem;
+  }
+  .contact-btn{
+    margin: 0 30% 0 30%;
+  }
+  .contact-banner{
+    height: 250px;
+  }
+  .contact-banner-text{
+    font-size: 16px;
+  }
+}
